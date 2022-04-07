@@ -5,13 +5,16 @@ repos:
     -   id: no-commit-to-branch
         args: ['--branch', 'master']
     -   id: pretty-format-json
--   repo: https://github.com/pocc/pre-commit-hooks
-    rev: master
+      #-   repo: https://github.com/pocc/pre-commit-hooks
+      # rev: master
+      # hooks:
+      # - id: uncrustify'''
+-   repo: local
     hooks:
-      - id: uncrustify
--   repo: https://github.com/gherynos/pre-commit-java
-    rev: v0.1.0  # Use the ref you want to point at
-    hooks:
-      - id: checkstyle
-        args: [--diff, --check]
-
+    -   id: jira-ticket
+        name: check for jira ticket
+        language: pygrep
+        entry: '\A(?![A-Z]+-[0-9]+)'
+        args: [--multiline]
+        stages: [commit-msg]
+        
