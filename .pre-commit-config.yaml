@@ -13,5 +13,5 @@ repos:
     rev: v0.1.0  # Use the ref you want to point at
     hooks:
       - id: checkstyle
-        args: ['-c', 'config/checkstyle/checkstyle.xml']
+        args: [--diff, --check]
 
