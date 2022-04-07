@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.3.0
+    rev: v4.2.0
     hooks:
     -   id: no-commit-to-branch
         args: ['--branch', 'master']
@@ -17,4 +17,3 @@ repos:
         entry: '\A(?![A-Z]+-[0-9]+)'
         args: [--multiline]
         stages: [commit-msg]
-        
