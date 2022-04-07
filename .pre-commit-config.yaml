@@ -5,3 +5,7 @@ repos:
     -   id: no-commit-to-branch
         args: ['--branch', 'master']
     -   id: pretty-format-json
+-   repo: https://github.com/pocc/pre-commit-hooks
+    rev: master
+    hooks:
+      - id: uncrustify
