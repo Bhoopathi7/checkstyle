@@ -3,6 +3,7 @@ repos:
     rev: v4.2.0
     hooks:
     -   id: no-commit-to-branch
+        name: Don't push to this branch
         args: ['--branch', 'main']
         stages: [push]
 
